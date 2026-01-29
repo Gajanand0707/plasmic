@@ -1,7 +1,24 @@
-import * as React from 'react';
-import { PlasmicCanvasHost } from '@plasmicapp/loader-nextjs';
-import { PLASMIC } from '@/plasmic-init';
+"use client";
+
+import * as React from "react";
+import { PlasmicCanvasHost } from "@plasmicapp/loader-nextjs";
+import { PLASMIC } from "@/plasmic-init";
+import HeroSection from "@/pages/components/HeroSection";
+
+/** ✅ Register component via PLASMIC */
+PLASMIC?.registerComponent(HeroSection, {
+  name: "HeroSection",
+  props: {
+    title: {
+      type: "string",
+      defaultValue: "Welcome to our website",
+    },
+    subtitle: {
+      type: "string",
+    },
+  },
+});
 
 export default function PlasmicHost() {
-  return PLASMIC && <PlasmicCanvasHost />;
+  return <PlasmicCanvasHost />;
 }
