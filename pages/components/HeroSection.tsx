@@ -28,6 +28,7 @@ export default function HeroSection({
       >
         {title}
       </h1>
+      
       <p
         style={{
           fontSize: "18px",
