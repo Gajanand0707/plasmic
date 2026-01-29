@@ -1,9 +1,9 @@
 import React from "react";
 
-type HeroSectionProps = {
+export interface HeroSectionProps {
   title?: string;
   subtitle?: string;
-};
+}
 
 export default function HeroSection({
   title = "Welcome to our website",
