@@ -5,7 +5,7 @@ import { PlasmicCanvasHost } from "@plasmicapp/loader-nextjs";
 import { PLASMIC } from "@/plasmic-init";
 import HeroSection from "@/pages/components/HeroSection";
 
-/** ✅ Register component via PLASMIC */
+/** ✅ MUST be registered on PLASMIC */
 PLASMIC?.registerComponent(HeroSection, {
   name: "HeroSection",
   props: {
