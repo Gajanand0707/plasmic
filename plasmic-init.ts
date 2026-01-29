@@ -17,13 +17,20 @@ export const PLASMIC = initPlasmicLoader({
 });
 PLASMIC.registerComponent(HeroSection, {
   name: "HeroSection",
+  displayName: "Hero Section",
+  description: "A hero section component with title and subtitle",
   props: {
     title: {
       type: "string",
+      displayName: "Title",
       defaultValue: "Welcome to our website",
+      description: "The main title text",
     },
     subtitle: {
       type: "string",
+      displayName: "Subtitle",
+      defaultValue: "Your amazing subtitle here",
+      description: "The subtitle text",
     },
   },
 });

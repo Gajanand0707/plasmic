@@ -1,22 +1,42 @@
-// components/sections/HeroSection.tsx
 import React from "react";
 
 type HeroSectionProps = {
-  title: string;
+  title?: string;
   subtitle?: string;
 };
 
-export default function HeroSection({ title, subtitle }: HeroSectionProps) {
+export default function HeroSection({
+  title = "Welcome to our website",
+  subtitle = "Your amazing subtitle here",
+}: HeroSectionProps) {
   return (
-    <section className="py-20 px-6 bg-gray-100" style={{ display: "block" }}>
-      <h1 className="text-4xl font-bold" style={{ color: "#000", visibility: "visible" }}>
+    <section
+      style={{
+        padding: "80px 24px",
+        backgroundColor: "#f3f4f6",
+        width: "100%",
+        boxSizing: "border-box",
+      }}
+    >
+      <h1
+        style={{
+          fontSize: "36px",
+          fontWeight: "bold",
+          color: "#000000",
+          margin: "0 0 16px 0",
+        }}
+      >
         {title}
       </h1>
-      {subtitle && (
-        <p className="mt-4 text-lg" style={{ color: "#000", visibility: "visible" }}>
-          {subtitle}
-        </p>
-      )}
+      <p
+        style={{
+          fontSize: "18px",
+          color: "#000000",
+          margin: "0",
+        }}
+      >
+        {subtitle}
+      </p>
     </section>
   );
 }
